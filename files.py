@@ -6,4 +6,9 @@ def modify_file(input_filename, output_filename):
         with open(input_filename, 'r') as file:
             content = file.read()
         modified_content = content.upper()
+     try:
+            # Open the output file for writing
+            with open(output_filename, 'w') as file:
+                file.write(modified_content)
+            print(f"Successfully wrote modified content to {output_filename}")
     
